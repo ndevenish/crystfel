@@ -143,7 +143,7 @@ target_link_libraries(${PROJECT_NAME} PRIVATE util ${HDF5_C_LIBRARIES} ${ZLIB_LI
 
 if (XGANDALF_FOUND)
   target_include_directories(${PROJECT_NAME} PRIVATE ${XGANDALF_INCLUDE_DIRS})
-  target_link_libraries(${PROJECT_NAME} PRIVATE ${XGANDALF_LDFLAGS})
+  target_link_libraries(${PROJECT_NAME} PUBLIC ${XGANDALF_LDFLAGS})
 endif (XGANDALF_FOUND)
 
 if (FDIP_FOUND)
